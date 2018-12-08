@@ -1,18 +1,20 @@
 package com.example.events.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.UUID;
 
 @Entity
 public class Establishment {
     @Id
-    private UUID establishmentId;
+    @GeneratedValue
+    private Long id;
     private String name;
     private String address;
 
-    public UUID getEstablishmentId() {
-        return establishmentId;
+    public Long getEstablishmentId() {
+        return id;
     }
 
     public String getName() {
@@ -23,8 +25,8 @@ public class Establishment {
         return address;
     }
 
-    public void setEstablishmentId(UUID establishmentId) {
-        this.establishmentId = establishmentId;
+    public void setEstablishmentId(Long establishmentId) {
+        this.id = establishmentId;
     }
 
     public void setName(String name) {
@@ -32,12 +34,6 @@ public class Establishment {
     }
 
     public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public Establishment(UUID establishmentId, String name, String address) {
-        this.establishmentId = establishmentId;
-        this.name = name;
         this.address = address;
     }
 }

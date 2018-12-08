@@ -1,30 +1,31 @@
 package com.example.events.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
 public class Events {
     @Id
+    @GeneratedValue
+    private Long id;
     private String eventName;
     private String details;
     private String duration;
     @ManyToOne
     private Establishment establishment;
-    @ManyToOne
-    private Client client;
+    @OneToMany
+    private List<Client> clients;
     private String date;
     private Integer places;
     private boolean isAccept;
 
-    public Client getClient() {
-        return client;
+    public List<Client> getClients() {
+        return clients;
     }
 
-    public void setClient(Client client) {
-        this.client = client;
+    public void setClients(List<Client> clients) {
+        this.clients = clients;
     }
 
     public boolean isAccept() {
@@ -83,14 +84,11 @@ public class Events {
         this.places = places;
     }
 
-    public Events(String eventName, String details, String duration, Establishment establishment, String date, Integer places) {
-        this.eventName = eventName;
-        this.details = details;
-        this.duration = duration;
-        this.establishment = establishment;
-        this.date = date;
-        this.places = places;
+    public Long getId() {
+        return id;
     }
 
-
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
