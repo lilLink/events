@@ -3,7 +3,7 @@ package com.example.events.model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+
 
 @Entity
 public class Events {
@@ -13,7 +13,7 @@ public class Events {
     private String duration;
     @ManyToOne
     private Establishment establishment;
-    @OneToMany
+    @ManyToOne
     private Client client;
     private String date;
     private Integer places;
@@ -83,14 +83,13 @@ public class Events {
         this.places = places;
     }
 
-    public Events(String eventName, String details, String duration, Establishment establishment, String date, Integer places, boolean isAccept) {
+    public Events(String eventName, String details, String duration, Establishment establishment, String date, Integer places) {
         this.eventName = eventName;
         this.details = details;
         this.duration = duration;
         this.establishment = establishment;
         this.date = date;
         this.places = places;
-        this.isAccept = isAccept;
     }
 
 
