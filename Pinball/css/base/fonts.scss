@@ -1,0 +1,13 @@
+// MIXINS
+
+@mixin helvetica($style: regular) {
+	font-family: 'HelveticaNeue';
+
+	@if $style==bold {
+		font-family: 'HelveticaNeue-Bold';
+	}
+
+	@if $style==lightbold {
+		font-family: 'HelveticaNeue-BoldItalic';
+	}
+}

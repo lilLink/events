@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Vendors -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container header__container">
+                <div class="logo">
+                    <img src="images/icons/header/logo.png" alt="Our logo" class="logo__image">
+                    <h1 class="logo__caption">Hackaton</h1>
+                </div>
+                <!-- <nav class="nav">
+                        <div class="nav__btn">
+                            <span class="nav__btn-line"></span>
+                            <span class="nav__btn-line"></span>
+                            <span class="nav__btn-line"></span>
+                        </div>
+                    </nav> -->
+                <!-- <div class="search">
+                    <form action="" method="GET" class="search__form">
+                        <input type="search" class="search__input" name="search">
+                        <button type="submit" class="search__btn"></button>
+                    </form>
+                </div> -->
+                <div class="user">
+                    <!-- <img src="images/icons/header/taylor.jpg" alt="User Photo" class="user__image">
+                        <h4 class="user__name">Welcome Taylor</h4> -->
+                    <!-- <button class="user__btn user__btn--sign-in">Sign in</button> -->
+                    <button class="user__btn user__btn--sign-up">Add event</button>
+                </div>
+        </header>
+
+        <!-- MAIN -->
+        <main class="main">
+            <div class="container">
+                <ul class="news">
+                    <li class="news__item">
+                        <div class="news__image-container">
+                            <img src="images/main/web.jpg" alt="" class="news__image">
+                        </div>
+                        <div class="news__desc">
+                            <h3 class="news__caption">Hakaton</h3>
+                            <div class="news__geo">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="news__geo-item">SoftServe</span>
+                            </div>
+                            <p class="news__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
+                                odit.</p>
+                        </div>
+                        <div class="news__comment">
+                            <form action="" class="news__form" method="GET">
+                                <textarea name="comment" class="news__comment-item"></textarea>
+                                <button type="submit" class="news__comment-btn"><i class="fas fa-arrow-right news__comment-btn-icon"></i></button>
+                            </form>
+                            <div class="news__social news__social--facebook"></div>
+                        </div>
+                        <div class="news__reg">
+                            <button class="news__reg-btn">Reg on event</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>  
+        </main>
+    </div>
+
+
+    <!-- MODALS -->
+    <div class="modal modal-news-reg">
+            <div class="modal-news-reg__content">
+                <span class="modal__close modal-news-reg__close">&times;</span>
+                <h2 class="modal-news-reg__caption">Please, fill the form</h2>
+                <form action="" class = "modal-news-reg__form" method="POST">
+                    <h4 class="modal-news-reg__form-caption">First name</h4>
+                    <input type="text" class="modal-news-reg__form-input modal-news-reg__form-input--name" name="firstName">
+                    <h4 class="modal-news-reg__form-caption">Second name</h4>
+                    <input type="text" class="modal-news-reg__form-input modal-news-reg__form-input--secondName" name="secondName">
+                    <h4 class="modal-news-reg__form-caption">E-mail</h4>
+                    <input type="email" class="modal-news-reg__form-input modal-news-reg__form-input--email" name="email">
+
+                    <button type="submit" class="news__reg-btn modal-news-reg__form-btn">Send</button>
+                </form>
+            </div>
+        </div>
+
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+
+    <!-- Bootstrap scripts -->
+</body>
+
+</html>
